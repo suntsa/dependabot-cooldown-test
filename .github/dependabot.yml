@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    versioning-strategy: "increase"
+    directory: "./with-cooldown"
+    schedule:
+      interval: "daily"
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: "npm"
+    versioning-strategy: "increase"
+    directory: "./without-cooldown"
+    schedule:
+      interval: "daily"
