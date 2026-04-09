@@ -10,6 +10,18 @@ updates:
 
   - package-ecosystem: "npm"
     versioning-strategy: "increase"
+    directory: "./with-cooldown-grouping"
+    schedule:
+      interval: "daily"
+    cooldown:
+      default-days: 7
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "npm"
+    versioning-strategy: "increase"
     directory: "./without-cooldown"
     schedule:
       interval: "daily"
